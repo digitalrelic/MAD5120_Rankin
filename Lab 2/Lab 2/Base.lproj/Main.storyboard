@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,29 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OJX-fg-E9f">
-                                <rect key="frame" x="166" y="83" width="269" height="269"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OJX-fg-E9f">
+                                <rect key="frame" x="94" y="202" width="413" height="99"/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-Mg-UYP">
-                                <rect key="frame" x="326" y="382" width="118" height="31"/>
-                            </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Ba-Od6">
-                                <rect key="frame" x="166" y="384" width="123" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Ba-Od6">
+                                <rect key="frame" x="239" y="332" width="123" height="29"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COOK IT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eti-nW-Psq">
-                                <rect key="frame" x="266" y="35" width="69" height="21"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-Mg-UYP">
+                                <rect key="frame" x="300" y="379" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="6TS-RS-ygg"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="baconSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="TuL-RS-pg6"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-86-Djf">
+                                <rect key="frame" x="221" y="384" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COOK IT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eti-nW-Psq">
+                                <rect key="frame" x="266" y="152" width="69" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="E2o-dm-XVL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OJX-fg-E9f" firstAttribute="centerX" secondItem="YgN-Ba-Od6" secondAttribute="centerX" id="1z1-vp-AAH"/>
+                            <constraint firstItem="OJX-fg-E9f" firstAttribute="top" secondItem="eti-nW-Psq" secondAttribute="bottom" constant="29" id="4Uf-co-WCz"/>
+                            <constraint firstItem="YgN-Ba-Od6" firstAttribute="top" secondItem="OJX-fg-E9f" secondAttribute="bottom" constant="31" id="HX8-bL-OPK"/>
+                            <constraint firstItem="OJX-fg-E9f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78" id="Ujx-9T-3AR"/>
+                            <constraint firstItem="g4a-86-Djf" firstAttribute="centerY" secondItem="FdS-Mg-UYP" secondAttribute="centerY" id="cI4-cz-h5R"/>
+                            <constraint firstItem="YgN-Ba-Od6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dVd-AQ-InL"/>
+                            <constraint firstItem="eti-nW-Psq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="132" id="e8K-Mx-eRz"/>
+                            <constraint firstItem="FdS-Mg-UYP" firstAttribute="top" secondItem="YgN-Ba-Od6" secondAttribute="bottom" constant="19" id="fpc-CH-fMG"/>
+                            <constraint firstItem="g4a-86-Djf" firstAttribute="top" secondItem="YgN-Ba-Od6" secondAttribute="bottom" constant="24" id="jTP-tI-XNz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FdS-Mg-UYP" secondAttribute="bottom" constant="191" id="jaL-he-ggG"/>
+                            <constraint firstItem="YgN-Ba-Od6" firstAttribute="centerX" secondItem="FdS-Mg-UYP" secondAttribute="centerX" constant="-58.5" id="us1-ug-Uzy"/>
+                            <constraint firstItem="eti-nW-Psq" firstAttribute="centerX" secondItem="OJX-fg-E9f" secondAttribute="centerX" id="vbE-iE-jqm"/>
+                            <constraint firstItem="FdS-Mg-UYP" firstAttribute="leading" secondItem="g4a-86-Djf" secondAttribute="trailing" constant="39" id="wkh-tt-w4G"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="baconLabel" destination="g4a-86-Djf" id="83l-bo-7E1"/>
                         <outlet property="baconView" destination="OJX-fg-E9f" id="lXh-4d-rcE"/>
                         <outlet property="cookSlider" destination="FdS-Mg-UYP" id="7PC-SE-aTp"/>
                         <outlet property="foodSwitch" destination="YgN-Ba-Od6" id="QU7-hO-2Hm"/>
@@ -47,6 +79,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="169" y="484"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XA8-ls-6F7">
+            <objects>
+                <viewController id="u8I-eW-J2I" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L5D-pJ-5sH"/>
+                        <viewControllerLayoutGuide type="bottom" id="DYv-gS-cCU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="awh-vg-i2N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ze6-7F-He0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="-277"/>
         </scene>
     </scenes>
 </document>
