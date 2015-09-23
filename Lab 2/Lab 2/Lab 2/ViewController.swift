@@ -17,20 +17,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var labelOne: UILabel!
     @IBOutlet weak var baconView: UIImageView!
+    @IBOutlet weak var foodSwitch: UISegmentedControl!
     @IBOutlet weak var cookSlider: UISlider!
     @IBOutlet weak var baconLabel: UILabel!
-    @IBOutlet weak var instructions: UILabel!
-    @IBOutlet weak var segmentedButton: UISegmentedControl!
 
 
-//    @IBAction func instructionButton(sender:UISegmentedControl) {
-//        if sender.selectedSegmentIndex == 0 {
-//            instructions.text = "Drag slider to cook bacon!"
-//        }
-//        else if sender.selectedSegmentIndex == 1 {
-//            instructions.text = " "
-//        }
-//    }
     
     
 

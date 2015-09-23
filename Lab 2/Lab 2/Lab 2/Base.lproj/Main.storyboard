@@ -16,17 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="packaged" translatesAutoresizingMaskIntoConstraints="NO" id="OJX-fg-E9f">
-                                <rect key="frame" x="183" y="104" width="235" height="129"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-Mg-UYP">
+                                <rect key="frame" x="241" y="416" width="118" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="235" id="qQT-ml-uTW"/>
+                                    <constraint firstAttribute="width" constant="114" id="VzD-rX-e5F"/>
                                 </constraints>
-                            </imageView>
+                                <connections>
+                                    <action selector="baconSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="nmn-zO-mkR"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Ba-Od6">
+                                <rect key="frame" x="251" y="369" width="99" height="29"/>
+                                <segments>
+                                    <segment title="Black"/>
+                                    <segment title="White"/>
+                                </segments>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eti-nW-Psq">
                                 <rect key="frame" x="250" y="28" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="IXE-qF-rVT"/>
-                                    <constraint firstAttribute="height" constant="30" id="qaJ-NL-VZt"/>
+                                    <constraint firstAttribute="height" constant="30" id="BNH-Oa-6PU"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="COOK IT">
@@ -41,43 +50,43 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packaged" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbg-Fz-ALx">
-                                <rect key="frame" x="252" y="409" width="96" height="37"/>
+                                <rect key="frame" x="252" y="454" width="96" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="dLb-Xj-idj"/>
-                                    <constraint firstAttribute="height" constant="37" id="yAo-0c-QYO"/>
+                                    <constraint firstAttribute="height" constant="37" id="GR6-WH-tTs"/>
+                                    <constraint firstAttribute="width" constant="96" id="hDL-PS-Hqk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-Mg-UYP">
-                                <rect key="frame" x="234" y="312" width="118" height="31"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="packaged" translatesAutoresizingMaskIntoConstraints="NO" id="OJX-fg-E9f">
+                                <rect key="frame" x="125" y="139" width="356" height="129"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="J1z-9f-XlB"/>
-                                    <constraint firstAttribute="width" constant="114" id="VqM-me-B2h"/>
+                                    <constraint firstAttribute="width" constant="356" id="LTc-Uw-9Kx"/>
+                                    <constraint firstAttribute="height" constant="129" id="YKb-qP-B0j"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="baconSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="nmn-zO-mkR"/>
-                                </connections>
-                            </slider>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eti-nW-Psq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="3Bi-ii-qNM"/>
-                            <constraint firstItem="OJX-fg-E9f" firstAttribute="centerX" secondItem="eti-nW-Psq" secondAttribute="centerX" id="4hP-dr-JmE"/>
-                            <constraint firstItem="FdS-Mg-UYP" firstAttribute="top" secondItem="OJX-fg-E9f" secondAttribute="bottom" constant="79" id="5H0-YU-9sz"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jbg-Fz-ALx" secondAttribute="bottom" constant="154" id="IV1-Nl-wn7"/>
-                            <constraint firstItem="OJX-fg-E9f" firstAttribute="top" secondItem="eti-nW-Psq" secondAttribute="bottom" constant="46" id="LZX-vF-4aY"/>
-                            <constraint firstItem="FdS-Mg-UYP" firstAttribute="trailing" secondItem="jbg-Fz-ALx" secondAttribute="trailing" constant="2" id="Urs-Ti-cJi"/>
-                            <constraint firstItem="eti-nW-Psq" firstAttribute="trailing" secondItem="FdS-Mg-UYP" secondAttribute="trailing" id="fHZ-NJ-jFZ"/>
-                            <constraint firstItem="jbg-Fz-ALx" firstAttribute="top" secondItem="FdS-Mg-UYP" secondAttribute="bottom" constant="67" id="s2z-60-pq8"/>
-                            <constraint firstItem="eti-nW-Psq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zG5-X4-Xal"/>
+                            <constraint firstItem="FdS-Mg-UYP" firstAttribute="centerX" secondItem="jbg-Fz-ALx" secondAttribute="centerX" id="8eq-U5-kH6"/>
+                            <constraint firstItem="FdS-Mg-UYP" firstAttribute="top" secondItem="YgN-Ba-Od6" secondAttribute="bottom" constant="19" id="EpN-wX-c2o"/>
+                            <constraint firstItem="OJX-fg-E9f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="125" id="GA9-yw-KzF"/>
+                            <constraint firstItem="YgN-Ba-Od6" firstAttribute="centerX" secondItem="FdS-Mg-UYP" secondAttribute="centerX" id="MUU-hS-Dh8"/>
+                            <constraint firstItem="eti-nW-Psq" firstAttribute="centerX" secondItem="YgN-Ba-Od6" secondAttribute="centerX" id="OjH-7a-4UY"/>
+                            <constraint firstItem="OJX-fg-E9f" firstAttribute="top" secondItem="eti-nW-Psq" secondAttribute="bottom" constant="81" id="W1e-qu-aPG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jbg-Fz-ALx" secondAttribute="bottom" constant="109" id="aKG-Qu-pqL"/>
+                            <constraint firstItem="YgN-Ba-Od6" firstAttribute="trailing" secondItem="eti-nW-Psq" secondAttribute="trailing" id="av6-hQ-yUN"/>
+                            <constraint firstItem="YgN-Ba-Od6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cdi-gB-SQI"/>
+                            <constraint firstItem="eti-nW-Psq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fdB-Fx-l7u"/>
+                            <constraint firstItem="jbg-Fz-ALx" firstAttribute="top" secondItem="FdS-Mg-UYP" secondAttribute="bottom" constant="8" symbolic="YES" id="yR4-rm-Vbf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="baconLabel" destination="jbg-Fz-ALx" id="i8u-St-m9S"/>
                         <outlet property="baconView" destination="OJX-fg-E9f" id="lXh-4d-rcE"/>
                         <outlet property="cookSlider" destination="FdS-Mg-UYP" id="7PC-SE-aTp"/>
+                        <outlet property="foodSwitch" destination="YgN-Ba-Od6" id="QU7-hO-2Hm"/>
                         <outlet property="labelOne" destination="eti-nW-Psq" id="qdC-e3-hRL"/>
                     </connections>
                 </viewController>
