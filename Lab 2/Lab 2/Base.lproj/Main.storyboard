@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,16 +18,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="packaged" translatesAutoresizingMaskIntoConstraints="NO" id="OJX-fg-E9f">
-                                <rect key="frame" x="183" y="104" width="235" height="129"/>
+                                <rect key="frame" x="183" y="139" width="235" height="129"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="235" id="qQT-ml-uTW"/>
+                                    <constraint firstAttribute="width" constant="235" id="hPh-a6-ZPa"/>
                                 </constraints>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="98" y="71" width="235" height="81"/>
+                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eti-nW-Psq">
-                                <rect key="frame" x="250" y="28" width="100" height="30"/>
+                                <rect key="frame" x="250" y="46" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="IXE-qF-rVT"/>
-                                    <constraint firstAttribute="height" constant="30" id="qaJ-NL-VZt"/>
+                                    <constraint firstAttribute="width" constant="100" id="LMO-BF-fA3">
+                                        <variation key="heightClass=compact" constant="82"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="30" id="nse-Bz-Zog">
+                                        <variation key="heightClass=compact" constant="26"/>
+                                    </constraint>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="COOK IT">
@@ -40,22 +48,64 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packaged" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbg-Fz-ALx">
-                                <rect key="frame" x="252" y="409" width="96" height="37"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aVc-cp-1Nd">
+                                <rect key="frame" x="146" y="493" width="65" height="29"/>
+                                <segments>
+                                    <segment title="On"/>
+                                    <segment title="Off"/>
+                                </segments>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="268" y="280" width="65" height="9"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeText:" destination="BYZ-38-t0r" eventType="valueChanged" id="DHE-uf-Ube"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use slider to cook bacon." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpb-Qa-hzz">
+                                <rect key="frame" x="250" y="496" width="197" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="dLb-Xj-idj"/>
-                                    <constraint firstAttribute="height" constant="37" id="yAo-0c-QYO"/>
+                                    <constraint firstAttribute="width" constant="197" id="QrI-iz-Qjx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-Mg-UYP">
-                                <rect key="frame" x="234" y="312" width="118" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzA-P9-xUs">
+                                <rect key="frame" x="146" y="466" width="65" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="J1z-9f-XlB"/>
-                                    <constraint firstAttribute="width" constant="114" id="VqM-me-B2h"/>
+                                    <constraint firstAttribute="height" constant="21" id="csd-FZ-n1Q">
+                                        <variation key="heightClass=compact" constant="37"/>
+                                    </constraint>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="258" y="240" width="85" height="37"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="packaged" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbg-Fz-ALx">
+                                <rect key="frame" x="252" y="342" width="96" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="De9-wm-yVd"/>
+                                    <constraint firstAttribute="height" constant="37" id="eJc-eL-NK3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="397" y="115" width="96" height="37"/>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-Mg-UYP">
+                                <rect key="frame" x="112" y="346" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="ZO1-9q-WG9"/>
+                                    <constraint firstAttribute="height" constant="30" id="fOx-hV-Fmo"/>
+                                </constraints>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="386" y="71" width="118" height="31"/>
+                                </variation>
                                 <connections>
                                     <action selector="baconSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="nmn-zO-mkR"/>
                                 </connections>
@@ -63,29 +113,73 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eti-nW-Psq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="3Bi-ii-qNM"/>
-                            <constraint firstItem="OJX-fg-E9f" firstAttribute="centerX" secondItem="eti-nW-Psq" secondAttribute="centerX" id="4hP-dr-JmE"/>
-                            <constraint firstItem="FdS-Mg-UYP" firstAttribute="top" secondItem="OJX-fg-E9f" secondAttribute="bottom" constant="79" id="5H0-YU-9sz"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jbg-Fz-ALx" secondAttribute="bottom" constant="154" id="IV1-Nl-wn7"/>
-                            <constraint firstItem="OJX-fg-E9f" firstAttribute="top" secondItem="eti-nW-Psq" secondAttribute="bottom" constant="46" id="LZX-vF-4aY"/>
-                            <constraint firstItem="FdS-Mg-UYP" firstAttribute="trailing" secondItem="jbg-Fz-ALx" secondAttribute="trailing" constant="2" id="Urs-Ti-cJi"/>
-                            <constraint firstItem="eti-nW-Psq" firstAttribute="trailing" secondItem="FdS-Mg-UYP" secondAttribute="trailing" id="fHZ-NJ-jFZ"/>
-                            <constraint firstItem="jbg-Fz-ALx" firstAttribute="top" secondItem="FdS-Mg-UYP" secondAttribute="bottom" constant="67" id="s2z-60-pq8"/>
-                            <constraint firstItem="eti-nW-Psq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zG5-X4-Xal"/>
+                            <constraint firstItem="pzA-P9-xUs" firstAttribute="top" secondItem="FdS-Mg-UYP" secondAttribute="bottom" constant="90" id="1Na-UU-vPq">
+                                <variation key="heightClass=compact" constant="139"/>
+                            </constraint>
+                            <constraint firstItem="jbg-Fz-ALx" firstAttribute="leading" secondItem="FdS-Mg-UYP" secondAttribute="trailing" constant="24" id="2eg-3M-Yhg">
+                                <variation key="heightClass=compact" constant="-105"/>
+                            </constraint>
+                            <constraint firstItem="pzA-P9-xUs" firstAttribute="leading" secondItem="aVc-cp-1Nd" secondAttribute="leading" id="9Ip-0E-1mL">
+                                <variation key="heightClass=compact" constant="-10"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dpb-Qa-hzz" secondAttribute="bottom" constant="83" id="BgD-ZU-Yan"/>
+                            <constraint firstItem="jbg-Fz-ALx" firstAttribute="top" secondItem="FdS-Mg-UYP" secondAttribute="top" constant="-4" id="Bm6-zk-osr">
+                                <variation key="heightClass=compact" constant="44"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aVc-cp-1Nd" secondAttribute="bottom" constant="79" id="ENN-pc-gOP">
+                                <variation key="heightClass=compact" constant="112"/>
+                            </constraint>
+                            <constraint firstItem="FdS-Mg-UYP" firstAttribute="top" secondItem="OJX-fg-E9f" secondAttribute="bottom" constant="78" id="JJo-PT-KnV">
+                                <variation key="heightClass=compact" constant="-81"/>
+                            </constraint>
+                            <constraint firstItem="OJX-fg-E9f" firstAttribute="top" secondItem="eti-nW-Psq" secondAttribute="bottom" constant="63" id="LSW-fC-HTf">
+                                <variation key="heightClass=compact" constant="25"/>
+                            </constraint>
+                            <constraint firstItem="eti-nW-Psq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFb-sd-DBN">
+                                <variation key="heightClass=compact" constant="9"/>
+                            </constraint>
+                            <constraint firstItem="FdS-Mg-UYP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="114" id="TzG-1y-Szs">
+                                <variation key="heightClass=compact" constant="388"/>
+                            </constraint>
+                            <constraint firstItem="pzA-P9-xUs" firstAttribute="trailing" secondItem="aVc-cp-1Nd" secondAttribute="trailing" id="V6v-bN-IaR">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="eti-nW-Psq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="Vny-0Y-K7p">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="aVc-cp-1Nd" firstAttribute="firstBaseline" secondItem="dpb-Qa-hzz" secondAttribute="firstBaseline" id="bS1-te-Avs">
+                                <variation key="heightClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="aVc-cp-1Nd" firstAttribute="top" secondItem="pzA-P9-xUs" secondAttribute="bottom" constant="6" id="d73-56-xmF">
+                                <variation key="heightClass=compact" constant="3"/>
+                            </constraint>
+                            <constraint firstItem="eti-nW-Psq" firstAttribute="leading" secondItem="dpb-Qa-hzz" secondAttribute="leading" id="hvl-CL-ib5">
+                                <variation key="heightClass=compact" constant="66"/>
+                            </constraint>
+                            <constraint firstItem="dpb-Qa-hzz" firstAttribute="leading" secondItem="aVc-cp-1Nd" secondAttribute="trailing" constant="39" id="i8A-0z-SmP">
+                                <variation key="heightClass=compact" constant="-131"/>
+                            </constraint>
+                            <constraint firstItem="OJX-fg-E9f" firstAttribute="centerX" secondItem="eti-nW-Psq" secondAttribute="centerX" id="ogT-jk-zMX">
+                                <variation key="heightClass=compact" constant="-93.5"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="baconLabel" destination="jbg-Fz-ALx" id="i8u-St-m9S"/>
                         <outlet property="baconView" destination="OJX-fg-E9f" id="lXh-4d-rcE"/>
                         <outlet property="cookSlider" destination="FdS-Mg-UYP" id="7PC-SE-aTp"/>
+                        <outlet property="inst" destination="pzA-P9-xUs" id="kWe-pd-LrK"/>
+                        <outlet property="instLabel" destination="dpb-Qa-hzz" id="E4v-6z-oRA"/>
                         <outlet property="labelOne" destination="eti-nW-Psq" id="qdC-e3-hRL"/>
+                        <outlet property="switchControl" destination="aVc-cp-1Nd" id="IXe-Rx-VtQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="350" y="336"/>
         </scene>
     </scenes>
     <resources>
-        <image name="packaged" width="250" height="144"/>
+        <image name="packaged" width="304" height="118"/>
     </resources>
 </document>
