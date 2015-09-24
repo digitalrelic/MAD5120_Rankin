@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB384A251BB4488B0069C0F3"
-               BuildableName = "Lab 3.app"
-               BlueprintName = "Lab 3"
-               ReferencedContainer = "container:Lab 3.xcodeproj">
+               BlueprintIdentifier = "CBDE50291BB46923002817E5"
+               BuildableName = "Lab3_1.app"
+               BlueprintName = "Lab3_1"
+               ReferencedContainer = "container:Lab3_1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB384A3A1BB4488B0069C0F3"
-               BuildableName = "Lab 3Tests.xctest"
-               BlueprintName = "Lab 3Tests"
-               ReferencedContainer = "container:Lab 3.xcodeproj">
+               BlueprintIdentifier = "CBDE503E1BB46923002817E5"
+               BuildableName = "Lab3_1Tests.xctest"
+               BlueprintName = "Lab3_1Tests"
+               ReferencedContainer = "container:Lab3_1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB384A3A1BB4488B0069C0F3"
-               BuildableName = "Lab 3Tests.xctest"
-               BlueprintName = "Lab 3Tests"
-               ReferencedContainer = "container:Lab 3.xcodeproj">
+               BlueprintIdentifier = "CBDE503E1BB46923002817E5"
+               BuildableName = "Lab3_1Tests.xctest"
+               BlueprintName = "Lab3_1Tests"
+               ReferencedContainer = "container:Lab3_1.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB384A251BB4488B0069C0F3"
-            BuildableName = "Lab 3.app"
-            BlueprintName = "Lab 3"
-            ReferencedContainer = "container:Lab 3.xcodeproj">
+            BlueprintIdentifier = "CBDE50291BB46923002817E5"
+            BuildableName = "Lab3_1.app"
+            BlueprintName = "Lab3_1"
+            ReferencedContainer = "container:Lab3_1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB384A251BB4488B0069C0F3"
-            BuildableName = "Lab 3.app"
-            BlueprintName = "Lab 3"
-            ReferencedContainer = "container:Lab 3.xcodeproj">
+            BlueprintIdentifier = "CBDE50291BB46923002817E5"
+            BuildableName = "Lab3_1.app"
+            BlueprintName = "Lab3_1"
+            ReferencedContainer = "container:Lab3_1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,10 +95,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB384A251BB4488B0069C0F3"
-            BuildableName = "Lab 3.app"
-            BlueprintName = "Lab 3"
-            ReferencedContainer = "container:Lab 3.xcodeproj">
+            BlueprintIdentifier = "CBDE50291BB46923002817E5"
+            BuildableName = "Lab3_1.app"
+            BlueprintName = "Lab3_1"
+            ReferencedContainer = "container:Lab3_1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

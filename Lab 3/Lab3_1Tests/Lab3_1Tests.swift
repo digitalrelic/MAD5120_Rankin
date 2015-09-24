@@ -1,6 +1,6 @@
 //
-//  Lab_3Tests.swift
-//  Lab 3Tests
+//  Lab3_1Tests.swift
+//  Lab3_1Tests
 //
 //  Created by Daniel Rankin on 9/24/15.
 //  Copyright (c) 2015 Daniel Rankin. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class Lab_3Tests: XCTestCase {
+class Lab3_1Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
