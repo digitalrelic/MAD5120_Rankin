@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var numPackage: UITextField!
+    @IBOutlet weak var pkgWeight: UITextField!
+    @IBOutlet weak var numEaters: UITextField!
+    @IBOutlet weak var baconPerEater: UILabel!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
