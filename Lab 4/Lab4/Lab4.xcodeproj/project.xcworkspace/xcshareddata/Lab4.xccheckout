@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>06BF39CF-5E0E-43F0-BEC5-6CAD8D29CCFB</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Lab4</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9B6676BFFA0DC8561D41F204A3134D87B86B5C24</key>
 		<string>https://github.com/digitalrelic/MAD5120_Rankin.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Lab 4/Lab4/Lab4.xcodeproj/project.xcworkspace</string>
+	<string>Lab 4/Lab4/Lab4.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9B6676BFFA0DC8561D41F204A3134D87B86B5C24</key>
