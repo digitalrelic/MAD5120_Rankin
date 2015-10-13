@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Noisey Button.xcscheme</key>
+		<key>Lab4.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CB8723211BBAE2B20083369B</key>
+		<key>CB71C4761BCD562800833C87</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB8723361BBAE2B20083369B</key>
+		<key>CB71C48B1BCD562800833C87</key>
 		<dict>
 			<key>primary</key>
 			<true/>
