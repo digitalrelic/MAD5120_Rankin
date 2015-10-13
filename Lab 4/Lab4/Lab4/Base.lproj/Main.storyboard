@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HAPPYBACON-01" translatesAutoresizingMaskIntoConstraints="NO" id="CRy-Es-QcA">
-                                <rect key="frame" x="215" y="111" width="171" height="295"/>
+                                <rect key="frame" x="215" y="152" width="171" height="295"/>
                                 <animations/>
                             </imageView>
                         </subviews>
