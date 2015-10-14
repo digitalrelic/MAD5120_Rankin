@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     
     
+    
 
     @IBOutlet weak var speedButton: UISegmentedControl!
     @IBOutlet weak var imageView: UIImageView!
@@ -46,8 +47,11 @@ class ViewController: UIViewController {
         UIView.commitAnimations()
         
         angle += turnSpeed
-        if angle >= 0.6 || angle <= -0.6 {
+        if angle >= 0.60 || angle <= -0.60 {
             turnSpeed *= -1
+        }
+        if angle > 0.65 || angle < -0.65 {
+            angle = 0 //correct for over rotation
         }
         
         
