@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Lab_7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh7-VN-z3O">
+                                <rect key="frame" x="271" y="177" width="58" height="58"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="audio_icons-02">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TTz-lj-N2g"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtK-fN-b7h">
+                                <rect key="frame" x="272" y="148" width="56" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Odo-hg-xMT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="90" y="197" width="63" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Stop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ke-58-LpD">
+                                <rect key="frame" x="282" y="256" width="37" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="100" y="301" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaY-nO-7iM">
+                                <rect key="frame" x="271" y="284" width="58" height="58"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="PrX-Kh-Mfa"/>
+                                    <constraint firstAttribute="width" constant="58" id="c1J-KQ-mPF"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="audio_icons-03">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="173" y="283" width="58" height="58.5"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zac-ZZ-rOQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsi-Zv-EZ9">
+                                <rect key="frame" x="284" y="39" width="33" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jt9-6o-orp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="98" y="92" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KS-fS-6Fl">
+                                <rect key="frame" x="271" y="68" width="58" height="58"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="0hY-px-oUY"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="audio_icons-01">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dEX-8Y-gHF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nsi-Zv-EZ9" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="19" id="7WV-vl-3Cd">
+                                <variation key="heightClass=compact" constant="118"/>
+                            </constraint>
+                            <constraint firstItem="3KS-fS-6Fl" firstAttribute="top" secondItem="nsi-Zv-EZ9" secondAttribute="bottom" constant="8" symbolic="YES" id="BAk-Vt-gdo">
+                                <variation key="heightClass=compact" constant="12.5"/>
+                            </constraint>
+                            <constraint firstItem="Zh7-VN-z3O" firstAttribute="top" secondItem="gtK-fN-b7h" secondAttribute="bottom" constant="8" symbolic="YES" id="BFl-Bg-PqS">
+                                <variation key="heightClass=compact" constant="17.5"/>
+                            </constraint>
+                            <constraint firstItem="gtK-fN-b7h" firstAttribute="centerX" secondItem="Zh7-VN-z3O" secondAttribute="centerX" id="Ki8-FO-Vpo"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="NaY-nO-7iM" secondAttribute="bottom" constant="258" id="Nm8-Iz-B8k">
+                                <variation key="heightClass=compact" constant="171"/>
+                            </constraint>
+                            <constraint firstItem="Zh7-VN-z3O" firstAttribute="width" secondItem="NaY-nO-7iM" secondAttribute="width" id="PIN-Wh-A7D">
+                                <variation key="heightClass=compact" constant="-4"/>
+                            </constraint>
+                            <constraint firstItem="7ke-58-LpD" firstAttribute="top" secondItem="Zh7-VN-z3O" secondAttribute="bottom" constant="21" id="TVh-hX-Z6l">
+                                <variation key="heightClass=compact" constant="-92.5"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="NaY-nO-7iM" secondAttribute="centerX" id="WdN-Ck-nun">
+                                <variation key="heightClass=compact" constant="-141"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="Zh7-VN-z3O" secondAttribute="centerX" id="X1m-Mo-CnW"/>
+                            <constraint firstItem="3KS-fS-6Fl" firstAttribute="trailing" secondItem="Zh7-VN-z3O" secondAttribute="trailing" id="djT-9i-sM1">
+                                <variation key="heightClass=compact" constant="-124"/>
+                            </constraint>
+                            <constraint firstItem="3KS-fS-6Fl" firstAttribute="centerX" secondItem="nsi-Zv-EZ9" secondAttribute="centerX" id="kFB-Wo-tpr">
+                                <variation key="heightClass=compact" constant="6"/>
+                            </constraint>
+                            <constraint firstItem="Zh7-VN-z3O" firstAttribute="height" secondItem="NaY-nO-7iM" secondAttribute="height" id="q5y-pz-70t">
+                                <variation key="heightClass=compact" constant="-4"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="7ke-58-LpD" secondAttribute="centerX" id="s2s-gE-pax">
+                                <variation key="heightClass=compact" constant="-141"/>
+                            </constraint>
+                            <constraint firstItem="NaY-nO-7iM" firstAttribute="top" secondItem="7ke-58-LpD" secondAttribute="bottom" constant="8" id="tRk-QL-CCz">
+                                <variation key="heightClass=compact" constant="12"/>
+                            </constraint>
+                            <constraint firstItem="3KS-fS-6Fl" firstAttribute="leading" secondItem="Zh7-VN-z3O" secondAttribute="leading" id="tiQ-mH-BSt">
+                                <variation key="heightClass=compact" constant="-124"/>
+                            </constraint>
+                            <constraint firstItem="gtK-fN-b7h" firstAttribute="top" secondItem="3KS-fS-6Fl" secondAttribute="bottom" constant="22" id="uw3-ak-9Bg">
+                                <variation key="heightClass=compact" constant="-91"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="3KS-fS-6Fl" id="ess-Ll-gKs"/>
+                        <outlet property="recordButton" destination="Zh7-VN-z3O" id="neq-z5-yXU"/>
+                        <outlet property="stopButton" destination="NaY-nO-7iM" id="btQ-lL-nGN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="audio_icons-01" width="400" height="462"/>
+        <image name="audio_icons-02" width="480" height="480"/>
+        <image name="audio_icons-03" width="473" height="473"/>
+    </resources>
+</document>
