@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,33 +17,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="project2_icon2" translatesAutoresizingMaskIntoConstraints="NO" id="bdl-aO-3D2">
-                                <rect key="frame" x="175" y="82" width="250" height="250"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="project2_icon2" translatesAutoresizingMaskIntoConstraints="NO" id="bdl-aO-3D2">
+                                <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="GyC-pF-kZY"/>
+                                    <constraint firstAttribute="width" constant="250" id="cfi-0H-Oxf"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SuI-yv-IQD" appends="YES" id="uGW-Z1-G1L"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="project2_icon1" translatesAutoresizingMaskIntoConstraints="NO" id="cd8-u9-zjL">
+                                <rect key="frame" x="75" y="399" width="149" height="152"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="16C-s4-PWN"/>
-                                    <constraint firstAttribute="height" constant="250" id="lX9-yV-AJ8"/>
-                                    <constraint firstAttribute="width" constant="250" id="nS2-zG-ezY"/>
+                                    <constraint firstAttribute="width" constant="149" id="caS-Dd-xlC"/>
+                                    <constraint firstAttribute="height" constant="152" id="cuG-8W-xnQ"/>
                                 </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="project2_icon3" translatesAutoresizingMaskIntoConstraints="NO" id="pc8-DB-BDo">
+                                <rect key="frame" x="407" y="51" width="122" height="111"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="Cuj-Zx-13r"/>
+                                    <constraint firstAttribute="height" constant="111" id="lTn-Ai-z73"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="i3v-vi-1p6" appends="YES" id="9yT-FA-5ZA"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.83464061774172404" green="1" blue="0.97433735861647297" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bdl-aO-3D2" secondAttribute="bottom" constant="268" id="OXP-Zv-jP9"/>
-                            <constraint firstItem="bdl-aO-3D2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jjW-eD-ngP"/>
-                            <constraint firstItem="bdl-aO-3D2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="kkA-FZ-wXf"/>
+                            <constraint firstItem="cd8-u9-zjL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="31F-et-HNd"/>
+                            <constraint firstItem="bdl-aO-3D2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A1w-ui-tmA"/>
+                            <constraint firstAttribute="centerY" secondItem="bdl-aO-3D2" secondAttribute="centerY" id="DhZ-GA-kOl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cd8-u9-zjL" secondAttribute="bottom" constant="49" id="HdN-vG-dAu"/>
+                            <constraint firstAttribute="centerY" secondItem="bdl-aO-3D2" secondAttribute="centerY" id="Txe-vY-LMd"/>
+                            <constraint firstAttribute="centerY" secondItem="bdl-aO-3D2" secondAttribute="centerY" id="Xbd-Kn-FrE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pc8-DB-BDo" secondAttribute="trailing" constant="55" id="ZZ6-I7-YcU"/>
+                            <constraint firstItem="bdl-aO-3D2" firstAttribute="top" secondItem="pc8-DB-BDo" secondAttribute="bottom" constant="13" id="cEt-Lw-gta"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="bdl-aO-3D2" id="Ola-SA-EyM"/>
+                        <outlet property="imageView2" destination="pc8-DB-BDo" id="LXs-dr-S3V"/>
+                        <outlet property="imageView3" destination="cd8-u9-zjL" id="rAd-j3-uBQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="SuI-yv-IQD">
+                    <connections>
+                        <action selector="moveImage1:" destination="BYZ-38-t0r" id="mfD-Ko-q26"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Ufw-AC-gcP"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="i3v-vi-1p6">
+                    <connections>
+                        <action selector="moveImage2:" destination="BYZ-38-t0r" id="5uM-2w-d0S"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="eCN-AE-TQw"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>
     <resources>
+        <image name="project2_icon1" width="929" height="921"/>
         <image name="project2_icon2" width="899" height="899"/>
+        <image name="project2_icon3" width="913" height="913"/>
     </resources>
 </document>

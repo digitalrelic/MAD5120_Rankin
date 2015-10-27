@@ -8,16 +8,37 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
-
+    
+    /* This shit doesn't work right now
+    @IBAction func moveImage2(sender: UIPanGestureRecognizer) {
+        let translation = sender.translationInView(view)
+        sender.view!.center = CGPoint(x: sender.view!.center.x + translation.x, y: sender.view!.center.y + translation.y)
+        sender.setTranslation(CGPointZero, inView: view)
+        
+    }
+    
+    @IBAction func moveImage1(sender: UIPanGestureRecognizer) {
+        let translation = sender.translationInView(view)
+        sender.view!.center = CGPoint(x: sender.view!.center.x + translation.x, y: sender.view!.center.y + translation.y)
+        sender.setTranslation(CGPointZero, inView: view)
+    }
+    end of broken shit*/
+    
+    
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var imageView3: UIImageView!
     
     let analyzer: AKAudioAnalyzer
     let microphone = MicrophoneProcessor()
     let sequence = AKSequence()
     
     var angle: CGFloat=0.0
+    var angle1: CGFloat=0.0
+    var angle2: CGFloat=0.0
+    
     var scaleMultiplier: CGFloat=1.0
     
     var updateAnalysis: AKEvent { //create event to be sequenced
@@ -37,15 +58,31 @@ class ViewController: UIViewController {
         growImage()
     }
     
+
+    
     func spinImage(){ //spinning thing
         angle += CGFloat(analyzer.trackedAmplitude.value * 15)
+        angle1 += CGFloat(analyzer.trackedFrequency.value * 0.0008)
+        angle2 += CGFloat(analyzer.trackedAmplitude.value * 12)
         UIView.beginAnimations("spinner", context: nil)
         UIView.animateWithDuration(0.1, animations: { () -> Void in
             self.imageView.transform=CGAffineTransformMakeRotation(self.angle)
+            self.imageView2.transform=CGAffineTransformMakeRotation(self.angle1)
+            self.imageView3.transform=CGAffineTransformMakeRotation(self.angle2)
         })
         UIView.commitAnimations()
-        angle += 0.02 // insert reference to amplitude/frequency here for dynamic update
+        // base spinning amounts
+        angle += 0.02
+        angle1 += 0.025
+        angle2 += 0.01
+        
         if angle > CGFloat(2 * M_PI){
+            angle = 0
+        }
+        if angle1 > CGFloat(2 * M_PI){
+            angle = 0
+        }
+        if angle2 > CGFloat(2 * M_PI){
             angle = 0
         }
     }
@@ -57,14 +94,15 @@ class ViewController: UIViewController {
             self.imageView.transform = CGAffineTransformScale(self.imageView.transform, self.scaleMultiplier, self.scaleMultiplier)
             self.scaleMultiplier = 1
             
-         
         })
         
     }
     
     func updateInfo (){ //pulled by sequence to check for new audio data
-        let ampValue: Float = max(0.1, analyzer.trackedFrequency.value * 0.0015)
-        println (ampValue)
+        let freqValue: Float = max(0.1, analyzer.trackedFrequency.value * 0.001)
+        let ampValue: Float = max(0.1, analyzer.trackedAmplitude.value * 15)
+        println ("amplitude \(ampValue), frequency \(freqValue)")
+        
         
         
     }
@@ -91,3 +129,9 @@ class ViewController: UIViewController {
 
 }
 
+/*sources
+
+AudioKitDemo, http://audiokit.io
+Images: Daniel Rankin
+
+*/
