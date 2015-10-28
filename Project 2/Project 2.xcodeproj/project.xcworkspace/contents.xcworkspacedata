@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Project 2/VisualsTesting.playground">
-   </FileRef>
-   <FileRef
       location = "self:Project 2.xcodeproj">
    </FileRef>
 </Workspace>
