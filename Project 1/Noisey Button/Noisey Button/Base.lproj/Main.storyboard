@@ -121,6 +121,9 @@
                                     <segment title="Cat"/>
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeInstrument:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hm4-Xr-7mr"/>
+                                </connections>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noise-02" translatesAutoresizingMaskIntoConstraints="NO" id="Esa-Ef-Voy">
                                 <rect key="frame" x="180" y="36" width="240" height="150"/>

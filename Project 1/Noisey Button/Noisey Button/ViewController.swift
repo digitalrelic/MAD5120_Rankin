@@ -41,6 +41,9 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func changeInstrument(sender: AnyObject) {
+        getName()
+    }
     
     
     
