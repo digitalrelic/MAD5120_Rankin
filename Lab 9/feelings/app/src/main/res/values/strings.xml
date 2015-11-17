@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">feelings</string>
+    <string name="text_message">How are you feeling?</string>
+    <string name="mood_button">Mood</string>
+    <string name="feeling">Fart</string>
+    <string name="name_hint">Name</string>
+    <string-array name="moods">
+        <item>happy</item>
+        <item>sad</item>
+        <item>melancholy</item>
+        <item>pumped</item>
+    </string-array>
+    <string name="name_edit">Name</string>
+    <string name="toggle_on">Positive</string>
+    <string name="toggle_off">Negative</string>
+    <string name="yoga_text">Yoga</string>
+    <string name="yoga1_radio">Yin</string>
+    <string name="yoga2_radio">Bikram</string>
+    <string name="yoga3_radio">Hatha</string>
+</resources>
