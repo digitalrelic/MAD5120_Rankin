@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Project3</string>
     <string name="action_settings">Settings</string>
+    <string name="title">Calculate Your BMI!</string>
+    <string name="whint">Weight</string>
+    <string name="hhint">Height</string>
+    <string name="centi">cm</string>
+    <string name="inches">inches</string>
+    <string name="kilos">kg</string>
+    <string name="pounds">lbs</string>
+    <string name="buttontext">calculate</string>
+
 </resources>

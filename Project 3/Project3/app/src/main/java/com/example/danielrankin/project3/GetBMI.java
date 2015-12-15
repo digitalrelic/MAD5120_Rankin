@@ -1,6 +1,7 @@
 package com.example.danielrankin.project3;
 
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+
+import java.text.DecimalFormat;
 
 public class GetBMI extends AppCompatActivity {
 
@@ -17,15 +24,111 @@ public class GetBMI extends AppCompatActivity {
         setContentView(R.layout.activity_get_bmi);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+    }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+    public void calcBMI(View view) {
+
+        //output text
+        TextView showBMI = (TextView) findViewById(R.id.bmiText);
+
+
+
+        //check for metric length conversion
+        RadioGroup heightUnits = (RadioGroup) findViewById(R.id.radioGroup2);
+        int heightID = heightUnits.getCheckedRadioButtonId();
+        double heightMultiplier;
+        switch (heightID) {
+            case -1:
+                heightMultiplier = 0.01;
+                break;
+            case R.id.cm:
+                heightMultiplier = 0.01;
+                break;
+            case R.id.inches:
+                heightMultiplier = 0.0254;
+                break;
+            default:
+                heightMultiplier = 0.01;
+        }
+        //check for metric mass conversion
+        RadioGroup weightUnits = (RadioGroup) findViewById(R.id.radioGroup);
+        int weightID = weightUnits.getCheckedRadioButtonId();
+        double weightMultiplier;
+        switch (weightID) {
+            case -1:
+                weightMultiplier = 1;
+                break;
+            case R.id.kilos:
+                weightMultiplier = 1;
+                break;
+            case R.id.pounds:
+                weightMultiplier = 0.45;
+                break;
+            default:
+                weightMultiplier = 0.45;
+        }
+
+
+        //height
+        EditText heightText = (EditText) findViewById(R.id.editHeight);
+        float heightValue = Float.valueOf(heightText.getText().toString());
+        double convertedHeightValue = heightValue * heightMultiplier;
+
+        //weight
+        EditText weightText = (EditText) findViewById(R.id.editWeight);
+        float weightValue = Float.valueOf(weightText.getText().toString());
+        double convertedWeightValue = weightValue * weightMultiplier;
+
+        //calculate BMI
+        double BMI = convertedWeightValue / (convertedHeightValue * convertedHeightValue);
+        int i = (int) Math.round(BMI);
+
+
+        //categorize BMI output and set image
+        ImageView baconPicture = (ImageView) findViewById(R.id.imageView);
+        String catString = "";
+        int image;
+        if (i <= 18) {
+            catString = "Underweight";
+            image = R.drawable.image01;
+
+        } else if (i >= 19 && i <= 24) {
+            catString = "Healthy";
+            image = R.drawable.image02;
+
+        } else if (i >= 25 && i <= 29) {
+            catString = "Overweight";
+            image = R.drawable.image03;
+
+        } else if (i >= 30 && i <= 39) {
+            catString = "Obese";
+            image = R.drawable.image04;
+
+        } else if (i >= 40) {
+            catString = "Morbidly Obese";
+            image = R.drawable.image05;
+
+        } else image = R.drawable.image01;
+        baconPicture.setImageResource(image);
+
+
+
+        //prepare for display
+        String BMIOutput = Integer.toString(i);
+        showBMI.setText("Your BMI is " + BMIOutput + ". You are " + catString + ".");
+
+
+
+
+
+
+        /* debug area
+       String heightOutputTest = Double.toString(convertedHeightValue);
+       String weightOutputTest = Double.toString(convertedWeightValue);
+       showBMI.setText(BMIOutput + " " + weightOutputTest + " " + heightOutputTest);
+        end debug area */
+
+
     }
 
     @Override
