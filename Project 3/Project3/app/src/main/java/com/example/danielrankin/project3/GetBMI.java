@@ -1,5 +1,6 @@
 package com.example.danielrankin.project3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
@@ -30,6 +31,7 @@ public class GetBMI extends AppCompatActivity {
 
         //output text
         TextView showBMI = (TextView) findViewById(R.id.bmiText);
+        TextView showRec = (TextView) findViewById(R.id.baconrecommendation);
 
 
 
@@ -87,26 +89,32 @@ public class GetBMI extends AppCompatActivity {
         //categorize BMI output and set image
         ImageView baconPicture = (ImageView) findViewById(R.id.imageView);
         String catString = "";
+        String baconRec = "";
         int image;
         if (i <= 18) {
             catString = "Underweight";
             image = R.drawable.image01;
+            baconRec = "Eat more bacon!";
 
         } else if (i >= 19 && i <= 24) {
             catString = "Healthy";
             image = R.drawable.image02;
+            baconRec = "Keep eating bacon!";
 
         } else if (i >= 25 && i <= 29) {
             catString = "Overweight";
             image = R.drawable.image03;
+            baconRec = "Maybe chill on the bacon.";
 
         } else if (i >= 30 && i <= 39) {
             catString = "Obese";
             image = R.drawable.image04;
+            baconRec = "Put down the bacon.";
 
         } else if (i >= 40) {
             catString = "Morbidly Obese";
             image = R.drawable.image05;
+            baconRec = "Don't even think about bacon.";
 
         } else image = R.drawable.image01;
         baconPicture.setImageResource(image);
@@ -115,12 +123,8 @@ public class GetBMI extends AppCompatActivity {
 
         //prepare for display
         String BMIOutput = Integer.toString(i);
-        showBMI.setText("Your BMI is " + BMIOutput + ". You are " + catString + ".");
-
-
-
-
-
+        showBMI.setText("Your BMI is " + BMIOutput + ". You are considered " + catString + ".");
+        showRec.setText(baconRec);
 
         /* debug area
        String heightOutputTest = Double.toString(convertedHeightValue);
@@ -128,6 +132,12 @@ public class GetBMI extends AppCompatActivity {
        showBMI.setText(BMIOutput + " " + weightOutputTest + " " + heightOutputTest);
         end debug area */
 
+    }
+
+    public void showInfo(View view){
+
+        Intent intent = new Intent(this, showInformation_.class);
+        startActivity(intent);
 
     }
 
