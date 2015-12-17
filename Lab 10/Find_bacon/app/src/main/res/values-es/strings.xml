@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Encuentra_tocino</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="baconTypes">
+        <item>corte fino</item>
+        <item>corte grueso</item>
+        <item>granja a la mesa</item>
+        <item>tocino mierda</item>
+    </string-array>
+    <string name="buttonText">Go Tocino!</string>
+    <string name="questionText">¿Cómo te gusta el tocino?</string>
+
+</resources>

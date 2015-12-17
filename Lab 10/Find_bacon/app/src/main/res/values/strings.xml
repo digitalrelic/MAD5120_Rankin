@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Find_bacon</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="baconTypes">
+        <item>thin sliced</item>
+        <item>thick cut</item>
+        <item>farm to table</item>
+        <item>shitty factory bacon</item>
+    </string-array>
+    <string name="buttonText">Go Bacon!</string>
+    <string name="questionText">How do you like your bacon?</string>
+    <string name="title_activity_get_bacon">get_bacon</string>
+
+</resources>
